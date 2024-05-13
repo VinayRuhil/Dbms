@@ -83,3 +83,39 @@ def search_data(db):
   else:
     for data in results:
       print(data)
+
+
+
+def show_menu(db):
+  print("=== APPLICATION DATABASE PYTHON ===")
+  print("1. Insert Data")
+  print("2. Show Data")
+  print("3. Update Data")
+  print("4. Delete Data")
+  print("5. Search Data")
+  print("0. GO Out")
+  print("------------------")
+  menu = input("Choose menu> ")
+
+  #clear screen
+  os.system("clear")
+
+  if menu == "1":
+    insert_data(db)
+  elif menu == "2":
+    show_data(db)
+  elif menu == "3":
+    update_data(db)
+  elif menu == "4":
+    delete_data(db)
+  elif menu == "5":
+    search_data(db)
+  elif menu == "0":
+    exit()
+  else:
+    print("Menu WRONG!")
+
+
+if __name__ == "__main__":
+  while(True):
+    show_menu(db)
